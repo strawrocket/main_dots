@@ -24,7 +24,7 @@
 
     // Updates Count
     "custom/updates": {
-        "format": "   {}",
+        "format": " {}",
         "escape": true,
         "return-type": "json",
         "exec": "~/.config/ml4w/scripts/updates.sh",
@@ -36,7 +36,7 @@
     // Pulseaudio
     "pulseaudio": {
         // "scroll-step": 1, // %, can be a float
-        "format": "{icon}   {volume}%",
+        "format": "{icon} {volume}%",
         "format-bluetooth": "{volume}% {icon} {format_source}",
         "format-bluetooth-muted": " {icon} {format_source}",
         "format-muted": " {format_source}",
@@ -55,9 +55,9 @@
     },
 
     "mpris": {
-        "format": "{player_icon} {dynamic}",
+        "format": " {player_icon} {dynamic}",
         "rotate": 0,
-        "format-paused": "{status_icon} <i>{dynamic}</i>",
+        "format-paused": "{status_icon} <!-- <i>{dynamic}</i> -->",
         "player-icons": { 
             "default": "▶",
             "mpv": "🎵"
@@ -70,36 +70,87 @@
         "interval": 1
     },
 
+    "temperature": {
+        "critical-threshold": 80,
+        // "format-critical": "{temperatureC}°C {icon}",
+        "format": "{icon} {temperatureC}°C ",
+        "format-icons": ["", "", ""]
+    },
+
+    "cpu": {
+        "interval": 10,
+        "format": "󰍛 {usage}%",
+        "rotate": 0,
+        "format-alt": "{icon0}{icon1}{icon2}{icon3}",
+        "format-icons": ["▁", "▂", "▃", "▄", "▅", "▆", "▇", "█"]
+    },
+
+    "custom/padd": {
+        "format": "  ",
+        "interval" : "once",
+        "tooltip": false
+    },
+
+    "custom/v_sep": {
+        "format": " | ",
+        "interval" : "once",
+        "tooltip": false
+    },
+
+    "memory": {
+        "states": {
+            "c": 90, // critical
+            "h": 60, // high
+            "m": 30, // medium
+        },
+        "interval": 30,
+        "format": "󰾆 {used}GB",
+        "rotate": 0,
+        "format-m": "󰾅 {used}GB",
+        "format-h": "󰓅 {used}GB",
+        "format-c": " {used}GB",
+        "format-alt": "󰾆 {percentage}%",
+        "max-length": 10,
+        "tooltip": true,
+        "tooltip-format": "󰾆 {percentage}%\n {used:0.1f}GB/{total:0.1f}GB"
+    },
 
     // Modules Left
-    "modules-left": [
-        "custom/appmenuicon",
+"modules-left": [
+//"custom/appmenuicon",
         "hyprland/workspaces",
-        "group/links",
-        "group/quicklinks",
-        "custom/empty",
+        "hyprland/window",
+        "custom/chatgpt",
+        "custom/quicklink_browser",
+        //"group/links",
+        //"group/quicklinks",
+        //"custom/empty",
+        "custom/v_sep",
         "mpris"
     ],
 
     // Modules Center
     "modules-center": [
-"hyprland/window",
-        "custom/empty"
+        "clock",
     ],
 
     // Modules Right    
     "modules-right": [
-        "custom/updates",
+       // "custom/updates",
         "pulseaudio",
 //"backlight",
         "bluetooth",
 "network",
-        "battery", 
-        "power-profiles-daemon",
-        "group/hardware",
+        //"power-profiles-daemon",
+        //"group/hardware",
+        "temperature",
+        "cpu",
+        "custom/v_sep",
+        "memory",
+        "custom/padd",
         "group/tools",
         "custom/exit",
-        "clock",
+
 "tray",
         "custom/notification",
         "custom/ml4w-welcome"
