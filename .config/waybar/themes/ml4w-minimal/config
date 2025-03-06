@@ -54,14 +54,22 @@
         "on-click": "pavucontrol"
     },
 
-    "custom/waybar-media": {
-        "return-type": "json",
-        "exec": "~/.config/ml4w/scripts/waybar-media.py status",
-        "on-click": "~/.config/ml4w/scripts/waybar-media.py playpause",
-        "on-scroll-up": "~/.config/ml4w/scripts/waybar-media.py previous",
-        "on-scroll-down": "~/.config/ml4w/scripts/waybar-media.py next",
-        "escape": true
+    "mpris": {
+        "format": "{player_icon} {dynamic}",
+        "rotate": 0,
+        "format-paused": "{status_icon} <i>{dynamic}</i>",
+        "player-icons": { 
+            "default": "▶",
+            "mpv": "🎵"
+        },
+        "status-icons": {
+            "paused": ""
+        },
+        // "ignored-players": ["firefox"]
+        "max-length": 1000,
+        "interval": 1
     },
+
 
     // Modules Left
     "modules-left": [
@@ -70,7 +78,7 @@
         "group/links",
         "group/quicklinks",
         "custom/empty",
-        "custom/waybar-media"
+        "mpris"
     ],
 
     // Modules Center

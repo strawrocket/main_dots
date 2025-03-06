@@ -24,6 +24,8 @@
 @define-color textcolor3 #FFFFFF;
 @define-color iconcolor #FFFFFF;
 
+@import "theme.css";
+
 /* -----------------------------------------------------
  * General
  * ----------------------------------------------------- */
@@ -81,11 +83,10 @@ window#waybar {
  * ----------------------------------------------------- */
 
 tooltip {
-    border-radius: 16px;
-    background-color: @backgroundlight;
-    opacity:0.9;
-    padding:20px;
-    margin:0px;
+    background: @main-bg;
+    color: @main-fg;
+    border-radius: 0px;
+    border-width: 0px;
 }
 
 tooltip label {
