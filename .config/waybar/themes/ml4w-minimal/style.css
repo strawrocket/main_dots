@@ -257,6 +257,10 @@ window#waybar.empty #window {
     margin: 0px 15px 0px 0px;
 }
 
+#custom-waybar-media.paused {
+    color: grey;
+}
+
 /* -----------------------------------------------------
  * Custom Notification
  * ----------------------------------------------------- */

@@ -54,13 +54,23 @@
         "on-click": "pavucontrol"
     },
 
+    "custom/waybar-media": {
+        "return-type": "json",
+        "exec": "~/.config/ml4w/scripts/waybar-media.py status",
+        "on-click": "~/.config/ml4w/scripts/waybar-media.py playpause",
+        "on-scroll-up": "~/.config/ml4w/scripts/waybar-media.py previous",
+        "on-scroll-down": "~/.config/ml4w/scripts/waybar-media.py next",
+        "escape": true
+    },
+
     // Modules Left
     "modules-left": [
-"custom/appmenuicon",
+        "custom/appmenuicon",
         "hyprland/workspaces",
         "group/links",
         "group/quicklinks",
-        "custom/empty"
+        "custom/empty",
+        "custom/waybar-media"
     ],
 
     // Modules Center
