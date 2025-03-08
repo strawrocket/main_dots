@@ -2,11 +2,11 @@
 # Any customization should be done in ~/.gtkrc-2.0.mine instead.
 
 include "/home/abeer/.gtkrc-2.0.mine"
-gtk-theme-name="Decay-Green"
-gtk-icon-theme-name="Gruvbox-Plus-Dark"
-gtk-font-name="Cantarell 11"
+gtk-theme-name="Graphite-Mono"
+gtk-icon-theme-name="Papirus-Dark-Maia"
+gtk-font-name="JetBrainsMono Nerd Font 11"
 gtk-cursor-theme-name="Adwaita"
-gtk-cursor-theme-size=24
+gtk-cursor-theme-size=14
 gtk-toolbar-style=GTK_TOOLBAR_ICONS
 gtk-toolbar-icon-size=GTK_ICON_SIZE_LARGE_TOOLBAR
 gtk-button-images=0

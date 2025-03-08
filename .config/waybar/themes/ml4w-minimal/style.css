@@ -353,7 +353,7 @@ window#waybar.empty #window {
  * Clock
  * ----------------------------------------------------- */
 
-#clock {
+#clock, #mpris {
     font-size: 14px;
     color: @textcolor;
     margin: 0px 15px 0px 0px;
