@@ -34,3 +34,8 @@ done
 if [ -f ~/.zshrc_custom ]; then
     source ~/.zshrc_custom
 fi
+
+# >>> Added by Spyder >>>
+alias spyder=/home/abeer/.local/spyder-6/envs/spyder-runtime/bin/spyder
+alias uninstall-spyder=/home/abeer/.local/spyder-6/uninstall-spyder.sh
+# <<< Added by Spyder <<<
