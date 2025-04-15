@@ -1,0 +1,6 @@
+node_modules/*
+cache/*
+rclone/*
+.config/tmux/.config/tmux/plugins
+.config/tmux/plugins
+.config/rclone/.config/rclone
