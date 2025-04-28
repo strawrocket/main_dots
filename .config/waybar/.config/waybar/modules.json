@@ -38,7 +38,7 @@
 	},
 
 	"river/tags": {
-		"num-tags": 9
+		"hide-vacant": true
 	},
 	"river/window": {
 		"max-length": 50
@@ -50,24 +50,7 @@
 			"deactivated": ""
 		}
 	},
-	"pulseaudio": {
-		"format": "{icon}  {volume}%",
-		"format-bluetooth": "{icon} {volume}%  {format_source}",
-		"format-bluetooth-muted": " {icon} {format_source}",
-		"format-muted": " {format_source}",
-		"format-source": " {volume}%",
-		"format-source-muted": "",
-		"format-icons": {
-			"headphone": "",
-			"hands-free": "",
-			"headset": "",
-			"phone": "",
-			"portable": "",
-			"car": "",
-			"default": ["", "", ""]
-		},
-		"on-click": "pavucontrol"
-	},
+
 	"network": {
 		"format-wifi": "   {essid} ({signalStrength}%)",
 		"format-ethernet": "{ipaddr}/{cidr} ",

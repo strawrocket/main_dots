@@ -25,8 +25,7 @@
         "clock"
     ],
     //Modules configuration
-
     "include": [
-		"~/.config/waybar/modules.json"
-	]
+        "~/.config/waybar/modules.json"
+    ]
 }

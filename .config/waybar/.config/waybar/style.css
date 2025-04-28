@@ -8,11 +8,11 @@
 }
 
 window#waybar {
-  background-color: @colbg;
-  /* background: rgba(0, 0, 0, 0); */
+  /* background-color: #787878; */
+  background: rgba(0, 0, 0, 0);
   transition-property: background-color;
   transition-duration: 0.5s;
-  /* opacity: 0.9;  */
+  /* opacity: 0.6; */
 }
 
 /* .modules-left, */
@@ -104,4 +104,20 @@ window#waybar {
 }
 #custom-arch:hover {
   color: #1793d1;
+}
+
+#river-tags button {
+  padding: 0 5px;
+  border: none;
+  background: transparent;
+  color: #888888; /* Unfocused tag */
+}
+
+#river-tags button.focused {
+  color: #ffaa00; /* Focused (active) tag */
+  font-weight: bold;
+}
+
+#river-tags button.urgent {
+  color: #ff0000; /* Urgent tag (alert) */
 }

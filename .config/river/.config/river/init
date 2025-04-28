@@ -17,7 +17,8 @@ riverctl spawn '/home/abeer/.config/river/scripts/monitors.sh'
 riverctl spawn waybar
 riverctl spawn 'rivertile -view-padding 2 -outer-padding 2'
 riverctl spawn 'wl-paste --watch cliphist store'
-riverctl spwan 'swaybg -i /home/abeer/wallpaper/car-2.png'
+riverctl spawn 'swww-daemon'
+# riverctl spwan 'swww img /home/abeer/wallpaper/car-2.png'
 
 # Super+Shift+Return to start an instance of foot (https://codeberg.org/dnkl/foot)
 riverctl map normal Super T spawn kitty
@@ -27,7 +28,12 @@ riverctl map normal Super E spawn dolphin
 riverctl map normal Super A spawn 'rofi -show run'
 
 # custom things
-riverctl set-cursor-wrap disabled
+# riverctl set-cursor-wrap disabled
+export XCURSOR_THEME="Adwaita"
+export XCURSOR_SIZE=20  # or whatever size you want, 24 is good
+
+riverctl set-cursor-warp enabled
+riverctl set-cursor-theme "$XCURSOR_THEME" "$XCURSOR_SIZE"
 
 # Super+Q to close the focused view
 riverctl map normal Super Q close
@@ -176,5 +182,6 @@ riverctl rule-add -app-id "bar" csd
 
 # Set the default layout generator to be rivertile and start it.
 # River will send the process group of the init executable SIGTERM on exit.
-riverctl default-layout rivertile
-rivertile -view-padding 2 -outer-padding 2 &
+riverctl default-layout river-dwindle
+river-dwindle --view-padding 0 --outer-padding 0 --ratio 0.5 &
+
