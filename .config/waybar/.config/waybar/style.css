@@ -75,7 +75,8 @@ window#waybar {
     margin-right: 10px;
 }
 
-#custom-cava{
+#custom-cava{    
+    color: #F48FB1;
     background: #1e1e2e;
     border-radius: 10px;
     margin-left: 10px;
@@ -107,7 +108,7 @@ window#waybar {
 
 
 #clock {
-    color: #a6adc8;
+    color: #fab387;
     border-radius: 10px 0px 0px 10px;
     margin-left: 5px;
     border-right: 0px;
