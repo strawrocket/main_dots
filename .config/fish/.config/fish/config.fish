@@ -32,7 +32,7 @@ set -gx PATH $PATH $PIP_HOME
 
 # Always mkdir a path (this doesn't inhibit functionality to make a single dir)
 abbr mkdir 'mkdir -p'
-
+pyenv init - fish | source
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
 if test -f /home/abeer/anaconda3/bin/conda
