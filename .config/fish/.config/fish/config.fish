@@ -48,3 +48,6 @@ end
 
 
 fish_add_path /home/abeer/.spicetify
+
+# Created by `pipx` on 2025-05-02 02:39:44
+set PATH $PATH /home/abeer/.local/bin
