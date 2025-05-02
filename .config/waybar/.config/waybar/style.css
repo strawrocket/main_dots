@@ -63,7 +63,7 @@ window#waybar {
     color: #a6adc8;
     border-radius: 0px 10px 10px 0px;
     margin-left: 0px;
-    border-right: 5px;
+    border: 0px;
 }
 
 #backlight {
@@ -76,7 +76,7 @@ window#waybar {
 }
 
 #custom-cava{    
-    color: #F48FB1;
+    color: #039BE5;
     background: #1e1e2e;
     border-radius: 10px;
     margin-left: 10px;
