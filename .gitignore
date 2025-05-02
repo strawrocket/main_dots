@@ -3,3 +3,4 @@ cache/*
 rclone/*
 .config/tmux/.config/tmux/plugins
 .config/tmux/plugins
+.config/yazi/.config/yazi/plugins/searchjump.yazi
