@@ -12,7 +12,9 @@
 		"hyprland/workspaces",
 		"custom/cava"
 	],
-	"modules-center": ["hyprland/window"],
+	"modules-center": [
+		"hyprland/window"
+	],
 	"modules-right": [
 		"tray",
 		"memory",
@@ -21,14 +23,17 @@
 		"battery",
 		"backlight",
 		"pulseaudio",
-		"pulseaudio#microphone"
+		"pulseaudio#microphone",
+		"custom/notifications"
 	],
 	"hyprland/window": {
 		"format": "󰣇 {}"
 	},
 	"hyprland/workspaces": {
 		"disable-scroll": true,
-		"all-outputs": true,
+		// only show active on that workspace
+		"all-outputs": false,
+		"active-only": false,
 		"on-click": "activate"
 		//"format": "{icon}",
 	},
@@ -67,10 +72,42 @@
 		"restart-interval": 1,
 		"hide-empty": true
 	},
+	"custom/notifications": {
+		// "format": "{icon} {}",
+		"format": "{} {icon}", // TODO: workaround for the module not showing up // revert when fixed
+		"format-icons": {
+			"email-notification": "<span foreground='white'><sup></sup></span>",
+			"chat-notification": "󱋊<span foreground='white'><sup></sup></span>",
+			"warning-notification": "󱨪<span foreground='yellow'><sup></sup></span>",
+			"error-notification": "󱨪<span foreground='red'><sup></sup></span>",
+			"network-notification": "󱂇<span foreground='white'><sup></sup></span>",
+			"battery-notification": "󰁺<span foreground='white'><sup></sup></span>",
+			"update-notification": "󰚰<span foreground='white'><sup></sup></span>",
+			"music-notification": "󰝚<span foreground='white'><sup></sup></span>",
+			"volume-notification": "󰕿<span foreground='white'><sup></sup></span>",
+			"notification": "<span foreground='white'><sup></sup></span>",
+			"dnd": "",
+			"none": ""
+		},
+		"return-type": "json",
+		"exec-if": "which dunstctl",
+		"exec": "./scripts/notifications.py",
+		"on-scroll-down": "sleep 0.1 && dunstctl history-pop",
+		"on-click": "dunstctl set-paused toggle",
+		"on-click-middle": "dunstctl history-clear",
+		"on-click-right": "dunstctl close-all",
+		"interval": 1,
+		"tooltip": true,
+		"escape": true
+	},
 	"backlight": {
 		"device": "intel_backlight",
 		"format": "{icon} {percent}%",
-		"format-icons": ["󰃞", "󰃟", "󰃠"],
+		"format-icons": [
+			"󰃞",
+			"󰃟",
+			"󰃠"
+		],
 		"on-scroll-up": "brightnessctl set 1%+",
 		"on-scroll-down": "brightnessctl set 1%-",
 		"min-length": 6
@@ -85,7 +122,19 @@
 		"format-charging": " {capacity}%",
 		"format-plugged": " {capacity}%",
 		"format-alt": "{time} {icon}",
-		"format-icons": ["󰂃", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"]
+		"format-icons": [
+			"󰂃",
+			"󰁺",
+			"󰁻",
+			"󰁼",
+			"󰁽",
+			"󰁾",
+			"󰁿",
+			"󰂀",
+			"󰂁",
+			"󰂂",
+			"󰁹"
+		]
 	},
 	"pulseaudio": {
 		"format": "{icon}  {volume}%",
@@ -102,7 +151,12 @@
 			"phone": "",
 			"portable": "",
 			"car": "",
-			"default": ["", "", "", ""]
+			"default": [
+				"",
+				"",
+				"",
+				""
+			]
 		}
 	},
 	"pulseaudio#microphone": {
@@ -134,7 +188,16 @@
 		"interval": 10,
 		"format": "󰍛 {usage}%",
 		"format-alt": "{icon0}{icon1}{icon2}{icon3}",
-		"format-icons": ["▁", "▂", "▃", "▄", "▅", "▆", "▇", "█"]
+		"format-icons": [
+			"▁",
+			"▂",
+			"▃",
+			"▄",
+			"▅",
+			"▆",
+			"▇",
+			"█"
+		]
 	},
 	"network": {
 		"tooltip": true,

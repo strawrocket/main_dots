@@ -51,6 +51,7 @@ window#waybar {
 #tray,
 #custom-weather,
 #custom-cava,
+#custom-notifications,
 #backlight {
     background: #1e1e2e;
     padding: 0px 10px;
@@ -120,13 +121,14 @@ window#waybar {
 
 }
 
+#pulseaudio.microphone,
 #pulseaudio {
     color: #a6adc8;
     border-left: 0px;
     border-right: 0px;
 }
 
-#pulseaudio.microphone {
+#custom-notifications {
     color: #a6adc8;
     border-radius: 0px 10px 10px 0px;
     border-left: 0px;
