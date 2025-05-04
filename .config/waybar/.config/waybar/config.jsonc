@@ -70,7 +70,8 @@
 		"format": "{}",
 		"exec": "$HOME/.config/waybar/scripts/cava.sh",
 		"restart-interval": 1,
-		"hide-empty": true
+		"hide-empty": true,
+		"on-click": "playerctl play-pause"
 	},
 	"custom/notifications": {
 		// "format": "{icon} {}",
@@ -91,7 +92,7 @@
 		},
 		"return-type": "json",
 		"exec-if": "which dunstctl",
-		"exec": "./scripts/notifications.py",
+		"exec": "~/.config/waybar/scripts/notifications.py",
 		"on-scroll-down": "sleep 0.1 && dunstctl history-pop",
 		"on-click": "dunstctl set-paused toggle",
 		"on-click-middle": "dunstctl history-clear",
