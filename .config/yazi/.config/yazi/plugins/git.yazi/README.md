@@ -1,78 +1,44 @@
 # git.yazi
+git message prompt plugin for Yazi,
 
-> [!NOTE]
-> Yazi v0.4.1 or later is required for this plugin to work.
+Asynchronous task loading without blocking the rendering of other components
 
-Show the status of Git file changes as linemode in the file list.
+![image](https://gitee.com/DreamMaoMao/git.yazi/assets/30348075/3a95e25a-cf0e-4f03-8d92-e7c9cc0767bb)
 
-https://github.com/user-attachments/assets/34976be9-a871-4ffe-9d5a-c4cdd0bf4576
 
-## Installation
 
-```sh
-ya pack -a yazi-rs/plugins:git
+
+https://gitee.com/DreamMaoMao/git.yazi/assets/30348075/f827dd33-8e51-4f8a-9069-0affc2f7aab8
+
+
+
+# Install 
+
+### Linux
+
+```bash
+git clone https://gitee.com/DreamMaoMao/git.yazi.git ~/.config/yazi/plugins/git.yazi
 ```
 
-## Setup
+# Dependcy
+- git
 
-Add the following to your `~/.config/yazi/init.lua`:
+# Usage 
 
-```lua
-require("git"):setup()
+Add this to ~/.config/yazi/init.lua
+
 ```
-
-And register it as fetchers in your `~/.config/yazi/yazi.toml`:
-
-```toml
-[[plugin.prepend_fetchers]]
-id   = "git"
-name = "*"
-run  = "git"
-
-[[plugin.prepend_fetchers]]
-id   = "git"
-name = "*/"
-run  = "git"
+require("git"):setup({
+    show_branch = true
+})
 ```
-
-## Advanced
-
-You can customize the [Style](https://yazi-rs.github.io/docs/plugins/layout#style) of the status sign with:
-
-- `THEME.git.modified`
-- `THEME.git.added`
-- `THEME.git.untracked`
-- `THEME.git.ignored`
-- `THEME.git.deleted`
-- `THEME.git.updated`
-
-For example:
-
-```lua
--- ~/.config/yazi/init.lua
-THEME.git = THEME.git or {}
-THEME.git.modified = ui.Style():fg("blue")
-THEME.git.deleted = ui.Style():fg("red"):bold()
+if you want listen for file changes to automatically update the status.
+Add this to ~/.config/yazi/yazi.toml, `below the exists [plugin] modules`, like this
 ```
+[plugin]
 
-You can also customize the text of the status sign with:
-
-- `THEME.git.modified_sign`
-- `THEME.git.added_sign`
-- `THEME.git.untracked_sign`
-- `THEME.git.ignored_sign`
-- `THEME.git.deleted_sign`
-- `THEME.git.updated_sign`
-
-For example:
-
-```lua
--- ~/.config/yazi/init.lua
-THEME.git = THEME.git or {}
-THEME.git.modified_sign = "M"
-THEME.git.deleted_sign = "D"
+fetchers = [
+	{ id = "git", name = "*", run = "git", prio = "normal" },
+	{ id = "git", name = "*/", run = "git", prio = "normal" },
+]
 ```
-
-## License
-
-This plugin is MIT-licensed. For more information check the [LICENSE](LICENSE) file.

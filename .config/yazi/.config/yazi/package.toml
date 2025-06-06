@@ -1,9 +1,4 @@
 [[plugin.deps]]
-use = "yazi-rs/plugins:full-border"
-rev = "02d18be"
-hash = "882ed23839778f82dc137248979c8681"
-
-[[plugin.deps]]
 use = "KKV9/compress"
 rev = "60b24af"
 hash = "ee025be766240cc98e671754ac836da3"
@@ -47,6 +42,16 @@ hash = "5c395bf9b8ef3d4701ac9bdbc963c4c1"
 use = "wekauwau/yatline-tokyo-night"
 rev = "19dbd25"
 hash = "5f00a80a79b9f7fd8e24d6fa5dbb3ae"
+
+[[plugin.deps]]
+use = "yazi-rs/plugins:full-border"
+rev = "63f9650"
+hash = "3996fc74044bc44144b323686f887e1"
+
+[[plugin.deps]]
+use = "llanosrocas/yaziline"
+rev = "e79b067"
+hash = "f590c5b7d0730e8d6023b1b34ddf7ead"
 
 [[flavor.deps]]
 use = "tkapias/moonfly"
