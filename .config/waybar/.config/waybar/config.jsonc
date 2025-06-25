@@ -20,14 +20,12 @@
 		"memory",
 		"cpu",
 		"network",
-		"battery",
-		"backlight",
 		"pulseaudio",
 		"pulseaudio#microphone",
 		"custom/notifications"
 	],
 	"hyprland/window": {
-		"format": "󰣇 {}"
+		"format": "{}"
 	},
 	"hyprland/workspaces": {
 		"disable-scroll": true,
