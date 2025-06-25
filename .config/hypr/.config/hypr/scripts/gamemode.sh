@@ -1,25 +1,31 @@
-#!/bin/bash
-#   ____                                          _
-#  / ___| __ _ _ __ ___   ___ _ __ ___   ___   __| | ___
-# | |  _ / _` | '_ ` _ \ / _ \ '_ ` _ \ / _ \ / _` |/ _ \
-# | |_| | (_| | | | | | |  __/ | | | | | (_) | (_| |  __/
-#  \____|\__,_|_| |_| |_|\___|_| |_| |_|\___/ \__,_|\___|
-#
-#
+#!/usr/bin/env bash
+# TODO: Add persistent mode
+HYPRGAMEMODE=$(hyprctl getoption animations:enabled | sed -n '1p' | awk '{print $2}')
 
-if [ -f $HOME/.config/ml4w/settings/gamemode-enabled ]; then
-    hyprctl reload
-    rm $HOME/.config/ml4w/settings/gamemode-enabled
-    notify-send "Gamemode deactivated" "Animations and blur enabled"
-else
-    hyprctl --batch "\
+# Hyprland performance
+if [ "$HYPRGAMEMODE" = 1 ]; then
+        hyprctl -q --batch "\
         keyword animations:enabled 0;\
         keyword decoration:shadow:enabled 0;\
+        keyword decoration:shadow:xray 1;\
         keyword decoration:blur:enabled 0;\
         keyword general:gaps_in 0;\
         keyword general:gaps_out 0;\
-        keyword general:border_size 1;\
-        keyword decoration:rounding 0"
-    touch $HOME/.config/ml4w/settings/gamemode-enabled
-    notify-send "Gamemode activated" "Animations and blur disabled"
+        keyword general:border_size 0;\
+        keyword decoration:rounding 0 ;\
+        keyword decoration:active_opacity 1 ;\
+        keyword decoration:inactive_opacity 1 ;\
+        keyword decoration:fullscreen_opacity 1 ;\
+        keyword decoration:fullscreen_opacity 1 ;\
+        keyword layerrule noanim,waybar ;\
+        keyword layerrule noanim,swaync-notification-window ;\
+        keyword layerrule noanim,swww-daemon ;\
+        keyword layerrule noanim,rofi
+        "
+        hyprctl 'keyword windowrule opaque,class:(.*)' # ensure all windows are opaque
+        notify-send "Game model enabled"
+        exit
+else
+        hyprctl reload config-only -q
+        notify-send "Game model disabled"
 fi
