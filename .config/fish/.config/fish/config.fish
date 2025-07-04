@@ -39,3 +39,17 @@ fish_add_path /home/abeer/.spicetify
 
 # Created by `pipx` on 2025-05-02 02:39:44
 set PATH $PATH /home/abeer/.local/bin
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+if test -f /home/abeer/anaconda3/bin/conda
+    eval /home/abeer/anaconda3/bin/conda "shell.fish" "hook" $argv | source
+else
+    if test -f "/home/abeer/anaconda3/etc/fish/conf.d/conda.fish"
+        . "/home/abeer/anaconda3/etc/fish/conf.d/conda.fish"
+    else
+        set -x PATH "/home/abeer/anaconda3/bin" $PATH
+    end
+end
+# <<< conda initialize <<<
+
