@@ -1,6 +1,8 @@
-node_modules/*
+qnode_modules/*
 cache/*
 rclone/*
 .config/tmux/.config/tmux/plugins
 .config/tmux/plugins
 .config/yazi/.config/yazi/plugins/searchjump.yazi
+.opencode/*
+.config/tmux/.config/tmux/.opencode
