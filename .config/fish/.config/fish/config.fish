@@ -34,6 +34,8 @@ set -gx PATH $PATH $PIP_HOME
 abbr mkdir 'mkdir -p'
 pyenv init - fish | source
 
+set PATH "$PATH":"$HOME/.local/scripts/"
+bind \cf "tmux-sessionizer"
 
 fish_add_path /home/abeer/.spicetify
 
