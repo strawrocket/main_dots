@@ -55,3 +55,9 @@ else
 end
 # <<< conda initialize <<<
 
+
+# Added by LM Studio CLI (lms)
+set -gx PATH $PATH /home/abeer/.lmstudio/bin
+# End of LM Studio CLI section
+
+set -gx LD_LIBRARY_PATH /opt/cuda/lib64 $LD_LIBRARY_PATH
