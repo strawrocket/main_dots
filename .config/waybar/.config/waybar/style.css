@@ -1,6 +1,6 @@
 * {
 	background-color: transparent;
-	color: #eff1f5;
+	color: #8a8a8d;
 	border: none;
 	border-radius: 0;
 	min-height: 0;
@@ -11,7 +11,7 @@
 
 window#waybar {
 	background: transparent;
-	color: #eff1f5;
+	color: #8a8a8d;
 }
 
 .modules-left {
@@ -27,15 +27,15 @@ window#waybar {
 	padding: 0 6px;
 	margin: 0 1.5px;
 	min-width: 9px;
-	color: #9ca0b0;
+	color: #4a4a4d;
 }
 
 #workspaces button.active {
-	color: #eff1f5;
+	color: #8a8a8d;
 }
 
 #workspaces button.focused {
-	color: #eff1f5;
+	color: #8a8a8d;
 }
 
 #workspaces button.urgent {
@@ -43,11 +43,11 @@ window#waybar {
 }
 
 #workspaces button:hover {
-	color: #cdd6f4;
+	color: #b8b8bb;
 }
 
 #workspaces button.empty {
-	color: #6c7086;
+	color: #3a3a3d;
 }
 
 #cpu,
@@ -83,9 +83,9 @@ window#waybar {
 
 tooltip {
 	padding: 2px;
-	background: #1e1e2e;
-	border: 1px solid #313244;
-	color: #cdd6f4;
+	background: #1e1e1e;
+	border: 1px solid #2a2a2a;
+	color: #8a8a8d;
 }
 
 .hidden {
