@@ -69,7 +69,9 @@
 		"exec": "$HOME/.config/waybar/scripts/cava.sh",
 		"restart-interval": 1,
 		"hide-empty": true,
-		"on-click": "playerctl play-pause"
+		"on-click": "playerctl next",
+		"on-click-right": "playerctl previous",
+		"on-click-middle": "playerctl play-pause"
 	},
 	"custom/notifications": {
 		// "format": "{icon} {}",
@@ -139,7 +141,8 @@
 		"format": "{icon}  {volume}%",
 		"tooltip": false,
 		"format-muted": "  Muted",
-		"on-click": "pamixer -t",
+		"on-click": "pavucontrol -t 3",
+		"on-click-right": "pamixer -t",
 		"on-scroll-up": "pamixer -i 1",
 		"on-scroll-down": "pamixer -d 1",
 		"scroll-step": 5,
