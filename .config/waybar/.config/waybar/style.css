@@ -1,91 +1,151 @@
 * {
 	background-color: transparent;
-	color: #8a8a8d;
+	color: #c6c6c9;
 	border: none;
 	border-radius: 0;
 	min-height: 0;
 	font-family: 'JetBrainsMono Nerd Font', monospace;
-	font-weight: bold;
+	font-weight: 600;
 	font-size: 12px;
 }
 
 window#waybar {
-	background: rgba(30, 30, 30, 0.85);
-	color: #8a8a8d;
+	background: rgba(18, 18, 21, 0.9);
+	color: #c6c6c9;
+	border-bottom: 1px solid rgba(246, 246, 255, 0.04);
 }
 
 .modules-left {
-	margin-left: 8px;
+	margin-left: 10px;
 }
 
 .modules-right {
-	margin-right: 8px;
+	margin-right: 10px;
+}
+
+.modules-left > widget,
+.modules-center > widget,
+.modules-right > widget {
+	margin: 0 6px;
 }
 
 #workspaces button {
 	all: initial;
-	padding: 0 6px;
-	margin: 0 1.5px;
-	min-width: 9px;
-	color: #4a4a4d;
+	padding: 2px 9px;
+	margin: 0 3px;
+	min-width: 16px;
+	border-radius: 6px;
+	font-family: 'JetBrainsMono Nerd Font', monospace;
+	font-weight: 600;
+	font-size: 11px;
+	letter-spacing: 0.05em;
+	color: #59595c;
+	background: rgba(255, 255, 255, 0.06);
+	transition: background 0.2s ease, color 0.2s ease;
 }
 
-#workspaces button.active {
-	color: #8a8a8d;
-}
-
+#workspaces button.active,
 #workspaces button.focused {
-	color: #8a8a8d;
+	color: #f5f5f7;
+	background: rgba(137, 180, 250, 0.25);
 }
 
 #workspaces button.urgent {
-	color: #a6e3a1;
+	color: #1e1e21;
+	background: #f38ba8;
 }
 
 #workspaces button:hover {
-	color: #b8b8bb;
+	color: #f5f5f7;
+	background: rgba(137, 180, 250, 0.35);
 }
 
 #workspaces button.empty {
-	color: #3a3a3d;
+	opacity: 0.55;
 }
 
+#window,
+#clock,
+#custom-weather,
 #cpu,
 #memory,
-#pulseaudio,
 #network,
-#custom-weather,
+#pulseaudio,
+#keyboard-state,
+#tray,
 #custom-notifications {
-	min-width: 12px;
-	margin: 0 7.5px;
+	padding: 0 12px;
+	min-width: 18px;
+	color: #d4d4d8;
 }
 
-#tray {
-	margin-right: 16px;
+#window {
+	color: #e2e2e7;
+	margin-left: 2px;
+	margin-right: 2px;
 }
 
-#network {
-	margin-right: 13px;
-}
-
-#custom-expand-icon {
-	margin-right: 20px;
+#window.empty,
+#custom-notifications.empty {
+	opacity: 0.5;
 }
 
 #clock {
-	margin-left: 8.75px;
+	font-size: 12px;
+	letter-spacing: 0.04em;
 }
 
 #custom-weather {
-	margin-left: 8.75px;
 	font-size: 10px;
+	letter-spacing: 0.08em;
+}
+
+#custom-weather.empty {
+	opacity: 0.45;
+}
+
+#network {
+	letter-spacing: 0.02em;
+}
+
+#keyboard-state {
+}
+
+#keyboard-state label {
+	padding: 0 8px;
+	border-radius: 5px;
+	background: rgba(255, 255, 255, 0.08);
+	min-width: 28px;
+}
+
+#keyboard-state label.locked {
+	color: #a6e3a1;
+}
+
+#keyboard-state label.unlocked {
+	color: #f2cdcd;
+	opacity: 0.55;
+}
+
+#custom-cava {
+	color: #89b4fa;
+	margin: 0 6px;
+	font-size: 10px;
+	letter-spacing: 1px;
+}
+
+#tray {
+	/* display: flex; */
+	/* gap: 8px; */
+	padding: 0 14px;
 }
 
 tooltip {
-	padding: 2px;
-	background: #1e1e1e;
-	border: 1px solid #2a2a2a;
-	color: #8a8a8d;
+	padding: 4px 6px;
+	background: #1e1e21;
+	border: 1px solid #2f2f34;
+	border-radius: 6px;
+	color: #c6c6c9;
 }
 
 .hidden {

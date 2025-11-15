@@ -1,0 +1,47 @@
+{
+  "search": {
+    "placeholder": "Search..."
+  },
+  "ui": {
+    "fullscreen": false,
+    "anchors": {
+      "top": true,
+      "bottom": false,
+      "left": false,
+      "right": false
+    },
+    "window_offset": 8,
+    "width": 600,
+    "height": 500
+  },
+  "list": {
+    "height": 400,
+    "always_show": true
+  },
+  "modules": [
+    {
+      "name": "applications",
+      "prefix": ""
+    },
+    {
+      "name": "runner",
+      "prefix": ">"
+    },
+    {
+      "name": "commands",
+      "prefix": "!"
+    },
+    {
+      "name": "websearch",
+      "prefix": "?"
+    }
+  ],
+  "websearch": {
+    "engines": [
+      {
+        "name": "Google",
+        "url": "https://www.google.com/search?q=%s"
+      }
+    ]
+  }
+}

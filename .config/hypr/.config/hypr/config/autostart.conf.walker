@@ -1,0 +1,2 @@
+# Start Walker service
+exec-once = walker --gapplication-service
