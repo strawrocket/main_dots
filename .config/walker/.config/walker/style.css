@@ -1,76 +1,167 @@
-/* Walker matte-black theme */
+@define-color selected-text #00D9FF;
+@define-color text #E0E0E0;
+@define-color base #0A0E14;
+@define-color border #39BAE680;
+@define-color foreground #B3B1AD;
+@define-color background #0A0E14;
+@define-color accent #39BAE6;
+@define-color hover #1A1F29;
+@define-color highlight #FF8F40;
+
 
 * {
-    font-family: 'Inter', sans-serif;
-    font-size: 14px;
+  all: unset;
 }
 
-window {
-    background-color: rgba(30, 30, 30, 0.95);
-    border-radius: 12px;
-    border: 1px solid #2a2a2a;
+* {
+  font-family: "JetBrains Mono", "Fira Code", monospace;
+  font-size: 16px;
+  color: @text;
 }
 
-/* Search input */
-#search {
-    background-color: #1a1a1a;
-    color: #8a8a8d;
-    border: 1px solid #2a2a2a;
-    border-radius: 8px;
-    padding: 12px 16px;
-    margin: 12px;
-    font-size: 16px;
-}
-
-#search:focus {
-    border-color: #3a3a3a;
-}
-
-/* Results list */
-#list {
-    background-color: transparent;
-    margin: 0 8px 8px 8px;
-}
-
-/* List items */
-.item {
-    background-color: transparent;
-    border-radius: 8px;
-    padding: 10px 12px;
-    margin: 2px 4px;
-    color: #8a8a8d;
-}
-
-.item:hover {
-    background-color: #2a2a2a;
-}
-
-.item:selected {
-    background-color: #3a3a3a;
-    color: #ffffff;
-}
-
-/* Item text */
-.item label {
-    color: inherit;
-}
-
-/* Item icons */
-.item image {
-    margin-right: 12px;
-}
-
-/* Scrollbar */
 scrollbar {
-    background-color: transparent;
+  opacity: 0;
 }
 
-scrollbar slider {
-    background-color: #3a3a3a;
-    border-radius: 10px;
-    min-width: 6px;
+.normal-icons {
+  -gtk-icon-size: 16px;
 }
 
-scrollbar slider:hover {
-    background-color: #4a4a4a;
+.large-icons {
+  -gtk-icon-size: 32px;
+}
+
+.box-wrapper {
+  background: @base;
+  padding: 24px;
+  border: 2px solid @border;
+  border-radius: 12px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.6);
+}
+
+.preview-box {
+}
+
+.box {
+}
+
+.search-container {
+  background: @hover;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid @border;
+}
+
+.input placeholder {
+  opacity: 0.5;
+  color: @foreground;
+}
+
+.input {
+}
+
+.input:focus,
+.input:active {
+  box-shadow: none;
+  outline: none;
+}
+
+.content-container {
+}
+
+.placeholder {
+}
+
+.scroll {
+}
+
+.list {
+}
+
+child,
+child > * {
+}
+
+child:hover .item-box {
+  background: @hover;
+  border-radius: 6px;
+  transition: all 200ms ease;
+}
+
+child:selected .item-box {
+  background: linear-gradient(90deg, alpha(@accent, 0.15), alpha(@accent, 0.05));
+  border-left: 3px solid @accent;
+  border-radius: 6px;
+}
+
+child:selected .item-box * {
+  color: @selected-text;
+  font-weight: 600;
+}
+
+.item-box {
+  padding: 8px 14px;
+  margin: 2px 0;
+  transition: all 200ms ease;
+}
+
+.item-text-box {
+  all: unset;
+  padding: 14px 0;
+}
+
+.item-text {
+}
+
+.item-subtext {
+  font-size: 13px;
+  color: @foreground;
+  opacity: 0.7;
+  margin-top: 2px;
+}
+
+.item-image {
+  margin-right: 14px;
+  -gtk-icon-transform: scale(0.9);
+}
+
+.current {
+  font-style: italic;
+}
+
+.keybind-hints {
+  background: @hover;
+  padding: 10px;
+  margin-top: 10px;
+  border-radius: 6px;
+  border-top: 1px solid @border;
+}
+
+.preview {
+  background: @base;
+  border-radius: 8px;
+  padding: 16px;
+  border: 1px solid @border;
+}
+
+.preview * {
+  color: @text;
+  background: transparent;
+}
+
+.preview label {
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.preview textview {
+  background: @hover;
+  padding: 12px;
+  border-radius: 6px;
+  border: 1px solid alpha(@border, 0.3);
+}
+
+.preview textview text {
+  color: @text;
+  background: transparent;
 }
