@@ -1,7 +1,7 @@
 [[plugin.deps]]
 use = "KKV9/compress"
-rev = "c264639"
-hash = "e17c11b605d989568a1d1741ca17c584"
+rev = "c9c16d8"
+hash = "a68bde26a61da040131aa95069f638c2"
 
 [[plugin.deps]]
 use = "imsi32/yatline"

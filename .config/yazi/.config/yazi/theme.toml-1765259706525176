@@ -8,7 +8,7 @@ separator_open = ""
 separator_close = ""
 separator_style = "angly"
 
-[mgr]
+[manager]
 # Better selection colors
 cwd = { fg = "#8aadf4", bold = true }
 

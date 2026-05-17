@@ -1,0 +1,9 @@
+preload = /home/abeer/wallpaper/cyberpunk_scape.jpeg
+preload = /home/abeer/wallpaper/mountain-3840x2160.jpeg
+
+wallpaper = DP-1,/home/abeer/wallpaper/cyberpunk_scape.jpeg
+wallpaper = HDMI-A-1,/home/abeer/wallpaper/mountain-3840x2160.jpeg
+
+splash = false
+ipc = on
+

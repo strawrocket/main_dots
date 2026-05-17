@@ -1,4 +1,4 @@
-set -g fish_greeting
+fish_greeting
 
 if status is-interactive
     starship init fish | source
@@ -35,7 +35,7 @@ abbr mkdir 'mkdir -p'
 pyenv init - fish | source
 
 set PATH "$PATH":"$HOME/.local/scripts/"
-bind \cf "tmux-sessionizer"
+bind \cf tmux-sessionizer
 
 fish_add_path /home/abeer/.spicetify
 
@@ -45,16 +45,17 @@ set PATH $PATH /home/abeer/.local/bin
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
 if test -f /home/abeer/anaconda3/bin/conda
-    eval /home/abeer/anaconda3/bin/conda "shell.fish" "hook" $argv | source
+    eval /home/abeer/anaconda3/bin/conda "shell.fish" hook $argv | source
 else
     if test -f "/home/abeer/anaconda3/etc/fish/conf.d/conda.fish"
         . "/home/abeer/anaconda3/etc/fish/conf.d/conda.fish"
     else
-        set -x PATH "/home/abeer/anaconda3/bin" $PATH
+        set -x PATH /home/abeer/anaconda3/bin $PATH
     end
 end
 # <<< conda initialize <<<
 
+set -U EDITOR nvim
 
 # Added by LM Studio CLI (lms)
 set -gx PATH $PATH /home/abeer/.lmstudio/bin

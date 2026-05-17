@@ -60,27 +60,27 @@ require("searchjump"):setup({
 })
 
 require("yaziline"):setup({
-	color = "#819CF1", -- main theme color
-	secondary_color = "#484D66", -- secondary color
-	default_files_color = "darkgray", -- color of the file counter when it's inactive
-	selected_files_color = "white",
-	yanked_files_color = "green",
-	cut_files_color = "red",
+color = "#8aadf4",
+secondary_color = "#494d64",
+default_files_color = "#939ab7",
+selected_files_color = "#a6da95",
+yanked_files_color = "#eed49f",
+cut_files_color = "#ed8796",
 
-	separator_style = "angly", -- "angly" | "curvy" | "liney" | "empty"
-	separator_open = "",
-	separator_close = "",
-	separator_open_thin = "",
-	separator_close_thin = "",
-	separator_head = "",
-	separator_tail = "",
+separator_style = "angly",
+separator_open = "",
+separator_close = "",
+separator_open_thin = "",
+separator_close_thin = "",
+separator_head = "",
+separator_tail = "",
 
-	select_symbol = "",
-	yank_symbol = "󰆐",
+select_symbol = "󰄲",
+yank_symbol = "󰆐",
 
-	filename_max_length = 24, -- truncate when filename > 24
-	filename_truncate_length = 6, -- leave 6 chars on both sides
-	filename_truncate_separator = "...", -- the separator of the truncated filename
+filename_max_length = 32,
+filename_truncate_length = 8,
+filename_truncate_separator = "…",
 })
 
 require("yatline-githead"):setup({
